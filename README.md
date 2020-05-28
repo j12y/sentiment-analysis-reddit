@@ -1,12 +1,12 @@
 
-# Sentiment Analaysis of Reddit with Python
+# Sentiment Analysis of Reddit with Python
 
 This repository contains source code that demonstrates
 how to do a sentiment analysis of user posts and comments
-sourced from Reddit.
+in a technical community sourced from Reddit.
 
-* pulling data using Reddit API
-* using VADER analysis
+* building a data set using Reddit API
+* using VADER sentiment analysis
 * building a model and training it
 
 You can find the accompanying two-part tutorial on
