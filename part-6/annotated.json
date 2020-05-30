@@ -1,0 +1,1822 @@
+{
+    "fmonppi": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.981,
+            "pos": 0.019,
+            "compound": 0.1779
+        },
+        "ups": 122,
+        "downs": 0,
+        "created": 1586293145.0,
+        "author": "tangerinelion",
+        "text": "To take a non programming approach, suppose you and I both have a $50 bill.  They are of equal value but are not the same as their serial numbers differ.\n\nSo they are equivalent but not identical.\n\nIn Python, == checks for equivalency.  For custom classes you can implement this yourself.  In contrast, is and is not checks to see if two things are identical.  Generally it's used to check if two variable names are aliases of each other and to check for None as there is only NoneType instance.",
+        "label": "neutral"
+    },
+    "fmo9wgl": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.92,
+            "pos": 0.08,
+            "compound": 0.5848
+        },
+        "ups": 254,
+        "downs": 0,
+        "created": 1586279773.0,
+        "author": "kberson",
+        "text": "The == operator compares the value or equality of two objects, whereas the Python `is` operator checks whether two variables point to the same object in memory. In the vast majority of cases, this means you should use the equality operators == and !=, except when you\u2019re comparing to None.\n\nThis applies to `is not` as well.",
+        "label": "neutral"
+    },
+    "fmodf8h": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 63,
+        "downs": 0,
+        "created": 1586283680.0,
+        "author": "samketa",
+        "text": "Suppose there is a list,\n\n```x = ['a', 'b', 'c', 'b']```\n\n\n```>>> x[1] == x[3]```\n\n```True```\n\n```>>> x[1] is x[3]```\n\n```False```\n\n\nEdit: This is an addendum to u/kberson 's [comment](https://www.reddit.com/r/learnpython/comments/fwhcas/whats_the_difference_between_and_is_not/fmo9wgl) which is totally correct. This is an example."
+        ,"label": "neutral"
+    },
+    "fmoa4m8": {
+        "score": {
+            "neg": 0.091,
+            "neu": 0.855,
+            "pos": 0.054,
+            "compound": -0.2714
+        },
+        "ups": 35,
+        "downs": 0,
+        "created": 1586280026.0,
+        "author": "SoNotRedditingAtWork",
+        "text": "I'm pulling your leg on this with this comment since u/kberson already answered your real question. But the the answer to your stated question is: there is no effective difference between:\n\n    if x != 5;\n       print(x)\n\nand \n\n    if x is not 5;\n       print(x)\n\nbecause they both result in a syntax error. Use `:` not `;`"
+        ,"label": "neutral"
+    },
+    "fmokgv0": {
+        "score": {
+            "neg": 0.035,
+            "neu": 0.909,
+            "pos": 0.056,
+            "compound": 0.5672
+        },
+        "ups": 9,
+        "downs": 0,
+        "created": 1586290592.0,
+        "author": "julsmanbr",
+        "text": "From a more object-oriented perspective:\n\n* `a == b` calls `a.__eq__(b)` -> checks if `a` is equal to `b` (whichever manner the object `a` decides to implement equality checking).\n* `a is b` calls `id(a).__eq__(id(b))` -> checks if `a` and `b` are stored in the same place in memory (equality checking between two integers representing memory locations).\n\nNote that you can overload `a.__eq__`, but Python (rather uncommonly) offers no interface for overloading the `is` keyword or the `id` function. In other words, you can redefine object equality, but not object identity.\n\nNormally, I use `is` only to make some statements more readable, like `if x is None` or `if y is True`, since `None`, `True` and `False` values are singletons, always pointing to the same place in memory."
+        ,"label": "neutral"
+    },
+    "fmofnfd": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 6,
+        "downs": 0,
+        "created": 1586286080.0,
+        "author": "Hailcanadien",
+        "text": "I'll add to everyone else's answers by saying that == calls the \n\n    __eq__ \nfunction defined by the two compared objects."
+        ,"label": "neutral"
+    },
+    "fmogcqt": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.962,
+            "pos": 0.038,
+            "compound": 0.1901
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586286803.0,
+        "author": "just_a_vagabond",
+        "text": "Object identity and object equivalence.\n\nThink of it like this:\n\n\u201c==\u201c, let\u2019s say you have a basketball and I have a basketball. Same exact color, shape, etc. We\u2019re holding two different basketballs, but they\u2019re \u201cequal\u201d to each other. \n\n\u201cis\u201d what if we were both holding the same basketball?"
+        ,"label": "neutral"
+    },
+    "fmpt296": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586315619.0,
+        "author": "El_Dumfuco",
+        "text": "Followup question: is \"is not\" a separate operator, or would this evaluate to \"is (not 5)\"?"
+        ,"label": "neutral"
+    },
+    "fmoo36g": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586293416.0,
+        "author": "Sonet_AD",
+        "text": "That I said"
+        ,"label": "neutral"
+    },
+    "fmoupit": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586297644.0,
+        "author": "FuriousCommunistBear",
+        "text": "I would do:\n\n\\`\\`\\`\n\nif x == 5:\n\npass\n\nelse:\n\nprint(x)\n\n\\`\\`\\`"
+        ,"label": "neutral"
+    },
+    "fmpemo8": {
+        "score": {
+            "neg": 0.208,
+            "neu": 0.792,
+            "pos": 0.0,
+            "compound": -0.3867
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586308272.0,
+        "author": "Jeacom512",
+        "text": "    a = [1, 2, 3]\n    b = [1, 2, 3]\n    \n    a != b\n    False\n    \n    a is not b\n    True"
+        ,"label": "neutral"
+    },
+    "fmqigva": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586329046.0,
+        "author": "deleted",
+        "text": "I typically only use the 'is' keyword if I am comparing something with None.. as in\n\n`x is None`\n\nor\n\n`x is not None`\n\n&#x200B;\n\nYou can use it with bools too but I don't need to very often"
+        ,"label": "neutral"
+    },
+    "fmr6smj": {
+        "score": {
+            "neg": 0.026,
+            "neu": 0.72,
+            "pos": 0.254,
+            "compound": 0.9582
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586344019.0,
+        "author": "Sonet_AD",
+        "text": "Practically there is no difference In both case the output will same.But conceptually they are slightly different.\nHere is an example-\nx=7\nx!=5 & x is not 5,both of them r true.But they are true for different reason.x!=5 is true because 5!=7.On the other hand, x is not 5nis true because 6 and 7 are not referring the same place of memory.The main thing is, != cares about value & is not cares about memory."
+        ,"label": "neutral"
+    },
+    "fmog5kc": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 0,
+        "downs": 0,
+        "created": 1586286596.0,
+        "author": "Miner_ChAI",
+        "text": "\u201ca is not b\u201d is the same as \u201cid(a) != id(b)\u201d"
+        ,"label": "neutral"
+    },
+    "fmol0tj": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.918,
+            "pos": 0.082,
+            "compound": 0.6239
+        },
+        "ups": 0,
+        "downs": 0,
+        "created": 1586291051.0,
+        "author": "Sonet_AD",
+        "text": "In programming!= & is not mean the same thing.They mean they are not equal.The core difference is on memory.Here is an example-\na=5\nb=5\nwe can say a=b, because thet are equal and mathematically equal.But we can't say a is b.Because a and b are not placed in same memory.\nHowever in programming, = indicates only value, but is indicates memory along with value."
+        ,"label": "neutral"
+    },
+    "fmogwee": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": -5,
+        "downs": 0,
+        "created": 1586287349.0,
+        "author": "deleted",
+        "text": "[deleted]"
+        ,"label": "neutral"
+    },
+    "fmopvfo": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.458,
+            "pos": 0.542,
+            "compound": 0.8516
+        },
+        "ups": 17,
+        "downs": 0,
+        "created": 1586294656.0,
+        "author": "webdotorg",
+        "text": "Wow, this was the best explanation so far!\n\n\\+1"
+        ,"label": "positive"
+    },
+    "fmp7dk7": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.791,
+            "pos": 0.209,
+            "compound": 0.4404
+        },
+        "ups": 6,
+        "downs": 0,
+        "created": 1586304605.0,
+        "author": "programmingfriend",
+        "text": "This is a good comparison. I will likely use this myself in the future."
+        ,"label": "positive"
+    },
+    "fmpp0e6": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.196,
+            "pos": 0.804,
+            "compound": 0.6249
+        },
+        "ups": 4,
+        "downs": 0,
+        "created": 1586313548.0,
+        "author": "_jgmm_",
+        "text": "great analogy."
+        ,"label": "positive"
+    },
+    "fmpu1xh": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586316136.0,
+        "author": "mattwilliams06",
+        "text": "Bro, who carries $50 bills?"
+        ,"label": "negative"
+    },
+    "fmodjk9": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.588,
+            "pos": 0.412,
+            "compound": 0.5994
+        },
+        "ups": 52,
+        "downs": 0,
+        "created": 1586283815.0,
+        "author": "Essence1337",
+        "text": "`is` is appropriate for True and False as well"
+        ,"label": "neutral"
+    },
+    "fmp70kh": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.848,
+            "pos": 0.152,
+            "compound": 0.4784
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586304413.0,
+        "author": "R_Olivaw_Daneel",
+        "text": "So would == return true if the two objects have the same keys and values, but different references? If so, is it just a shallow check?"
+        ,"label": "neutral"
+    },
+    "fmoitgd": {
+        "score": {
+            "neg": 0.141,
+            "neu": 0.734,
+            "pos": 0.125,
+            "compound": -0.3612
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586289148.0,
+        "author": "unsurestill",
+        "text": "just a question plz dont downvote me to hell lol\n\n\nso the \"is\" operator is the same as \"=\" operator? because they both point at some object right"
+        ,"label": "neutral"
+    },
+    "fmp4p6v": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.328,
+            "pos": 0.672,
+            "compound": 0.6249
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586303185.0,
+        "author": "SnowdenIsALegend",
+        "text": "Thankyou great explanation"
+        ,"label": "positive"
+    },
+    "fmq6ue0": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.797,
+            "pos": 0.203,
+            "compound": 0.4215
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586322760.0,
+        "author": "xelf",
+        "text": "An example: \n\n    print(0 == False) #prints True\n    print(0 is False) #prints False"
+        ,"label": "neutral"
+    },
+    "fmok0zi": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.831,
+            "pos": 0.169,
+            "compound": 0.9685
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586290215.0,
+        "author": "synthphreak",
+        "text": "What is the purpose of creating multiple references to the same object in memory? I\u2019ve never understood how/when that might be useful (compared to just creating a copy).\n\nSay I have a dict of values, `x`. Then say I run `y = x`. `x` and `y` are now \u201cthe same object in memory\u201d. That means if I add a key to `x`, `y` will also be updated with that same key. But why is that useful? I was already able to access that object in memory through the reference variable `x`, so what did also creating the additional reference point `y` achieve? What can I do now that I couldn\u2019t before `y` was defined?\n\nAnd if you have any references online where I could read more about this, that\u2019d be great. Thanks."
+        ,"label": "negative"
+    },
+    "fmol9rx": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.911,
+            "pos": 0.089,
+            "compound": 0.6369
+        },
+        "ups": 8,
+        "downs": 0,
+        "created": 1586291256.0,
+        "author": "MattR0se",
+        "text": "But `x[1] is x[3]` is `True` since (edit: short) string literals are an exception to the expected behaviour. Any value 'b' for example is always pointing to the same memory location\n\n    >>> x = ['a', 'b', 'c', 'b']\n    >>> x[1] is x[3]\n    True\n\nYou can see that the memory adresses are identical with this method:\n\n    print(hex(id(x[1])), hex(id(x[3])))"
+        ,"label": "neutral"
+    },
+    "fmogto4": {
+        "score": {
+            "neg": 0.095,
+            "neu": 0.823,
+            "pos": 0.082,
+            "compound": -0.1027
+        },
+        "ups": -4,
+        "downs": 0,
+        "created": 1586287274.0,
+        "author": "geneusutwerk",
+        "text": "Do you mean 2 and 4 not 1 and 3?\n\n&#x200B;\n\nEdit: Yes this is wrong. My brain wasn't thinking about index starting from 0, I do most things in R. My b."
+        ,"label": "neutral"
+    },
+    "fmoadjc": {
+        "score": {
+            "neg": 0.564,
+            "neu": 0.182,
+            "pos": 0.255,
+            "compound": -0.5267
+        },
+        "ups": 8,
+        "downs": 0,
+        "created": 1586280304.0,
+        "author": "Arag0ld",
+        "text": "Lol my bad. Typing error."
+        ,"label": "neutral"
+    },
+    "fmoafwn": {
+        "score": {
+            "neg": 0.044,
+            "neu": 0.789,
+            "pos": 0.167,
+            "compound": 0.8876
+        },
+        "ups": 10,
+        "downs": 0,
+        "created": 1586280380.0,
+        "author": "sme272",
+        "text": "piggybacking on this further, there is no difference between them in this case even with the syntax error fixed. Python creates an object for each number from 0 to 256 and every time those values are used in the program they're just pointed to those existing objects, so if you created two variables `a` and `b` and assigned them both a value of 5 then `a is b` would return True. If you assigned them both a value of 257 or higher however they would separately be allocated memory space with the value stored so the same check would return False."
+        ,"label": "neutral"
+    },
+    "fmorfvf": {
+        "score": {
+            "neg": 0.117,
+            "neu": 0.647,
+            "pos": 0.236,
+            "compound": 0.5719
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586295684.0,
+        "author": "CarlosDanger0123",
+        "text": "Great answer, I did not know any of this. \n\nAnd after 5 years of studying Python it amazes me how much shit I simply don't know."
+        ,"label": "positive"
+    },
+    "fmoy79g": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586299632.0,
+        "author": "YAYYYYYYYYY",
+        "text": "But what does is call \ud83e\udd14"
+        ,"label": "neutral"
+    },
+    "fmpvfc4": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586316857.0,
+        "author": "Arag0ld",
+        "text": "I believe it evaluates to ``is (not 5)``"
+        ,"label": "neutral"
+    },
+    "fmr3yr6": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.334,
+            "pos": 0.666,
+            "compound": 0.6114
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586342134.0,
+        "author": "FennexCity",
+        "text": "Happy cake day!"
+        ,"label": "positive"
+    },
+    "fmowszu": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.723,
+            "pos": 0.277,
+            "compound": 0.3182
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586298836.0,
+        "author": "high_okktane",
+        "text": "Just curious, why would you do this?"
+        ,"label": "neutral"
+    },
+    "fmruzty": {
+        "score": {
+            "neg": 0.148,
+            "neu": 0.852,
+            "pos": 0.0,
+            "compound": -0.8431
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586365244.0,
+        "author": "stevenjd",
+        "text": "> Practically there is no difference In both case the output will same.\n\n    py> a = []\n    py> b = []\n    py> a is not b\n    True\n    py> a != b\n    False\n\nEdit: in case you think it's only lists, here it is with floats:\n\n    py> a = 1.1\n    py> b = 1.1\n    py> a is not b\n    True\n    py> a != b\n    False\n\nand again with ints:\n\n    py> a = 999999\n    py> b = 999999\n    py> a is not b\n    True\n    py> a != b\n    False"
+        ,"label": "negative"
+    },
+    "fmon6e3": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.763,
+            "pos": 0.237,
+            "compound": 0.4215
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586292751.0,
+        "author": "tangerinelion",
+        "text": "   >>> a = 2048\n\n   >>> b = 512*4\n\n   >>> a==b\n\nTrue\n\n   >>> a is b\n\nFalse"
+        ,"label": "neutral"
+    },
+    "fmoriut": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586295737.0,
+        "author": "CarlosDanger0123",
+        "text": "Can someone more qualified than me comment if the above post makes any sense?"
+        ,"label": "neutral"
+    },
+    "fmrfofn": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.925,
+            "pos": 0.075,
+            "compound": 0.4404
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586350633.0,
+        "author": "derphurr",
+        "text": "A better explanation, a husband has $20, a son has $20.\n\nThe husband and son have same amount ( x == y )\n\nBecause the wife takes all the husband's money, the wife also has $20 (but it is the same $20 bill)  ( z is x )"
+        ,"label": "negative"
+    },
+    "fmoei2e": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 77,
+        "downs": 0,
+        "created": 1586284866.0,
+        "author": "Ramast",
+        "text": "If you have a variable x that can only be True/False then you should check using `if x:` and `if not x`"
+        ,"label": "neutral"
+    },
+    "fmop77w": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586294205.0,
+        "author": "case_O_The_Mondays",
+        "text": "And None"
+        ,"label": "neutral"
+    },
+    "fmr4wwq": {
+        "score": {
+            "neg": 0.253,
+            "neu": 0.393,
+            "pos": 0.354,
+            "compound": 0.5635
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586342758.0,
+        "author": "66bananasandagrape",
+        "text": "Quote from [PEP 8](https://www.python.org/dev/peps/pep-0008/#programming-recommendations):\n\nDon't compare boolean values to True or False using ==:\n\n    # Correct:\n    if greeting:\n\n    # Wrong:\n    if greeting == True:\n    \nWorse:\n\n    # Wrong:\n    if greeting is True:"
+        ,"label": "negative"
+    },
+    "fmpo86u": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.94,
+            "pos": 0.06,
+            "compound": 0.8074
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586313151.0,
+        "author": "CamiloDFM",
+        "text": "Every Python object has a dunder `__eq__` method, which is called when using the `==` operator. The actual answer to your question depends on the kind of object you're comparing.\n\nFor dicts, for example, it's going to do exactly what you said: uses `==` to see if they have the same keys, and for every key, compares their values with `==`. So even if their contents are not the same instance, as long as they evaluate to the same thing, they're considered \"equal\".\n\nFor arbitrary objects, though...\n\n    >>> class Test:\n    ...     def __init__(self, a, b):\n    ...             self.a = a\n    ...             self.b = b\n    ...\n    >>> first = Test(1, 2)\n    >>> second = Test(1, 2)\n    >>> first is first\n    True\n    >>> first == first\n    True\n    >>> first == second\n    False\n\n...equality is functionally the same as identity, unless they have `__eq__` defined."
+        ,"label": "neutral"
+    },
+    "fmprax3": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.861,
+            "pos": 0.139,
+            "compound": 0.7845
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586314704.0,
+        "author": "TSM-",
+        "text": "This depends on the object, since they can implement their own `__eq__(self, other)` method. In some cases, it will involve enumerating all the keys and values, and doing value comparisons or object identity comparisons.\n\n    >>> x = dict(a=1,b=2,c=3)\n    >>> d=4\n    >>> y = dict(a=1,b=2,c=d)\n    >>> x is y\n    False\n    >>>\n    >>> x == y\n    False\n    >>> z = dict(a=1,b=2,c=3)\n    >>> x == z\n    True"
+        ,"label": "neutral"
+    },
+    "fmoixw6": {
+        "score": {
+            "neg": 0.216,
+            "neu": 0.784,
+            "pos": 0.0,
+            "compound": -0.296
+        },
+        "ups": 14,
+        "downs": 0,
+        "created": 1586289261.0,
+        "author": "kberson",
+        "text": "No, not the same. The = is an assignment operator"
+        ,"label": "negative"
+    },
+    "fmp4ijl": {
+        "score": {
+            "neg": 0.125,
+            "neu": 0.765,
+            "pos": 0.11,
+            "compound": -0.1531
+        },
+        "ups": 4,
+        "downs": 0,
+        "created": 1586303086.0,
+        "author": "bouco",
+        "text": "Honestly, no one should say \"plz dont downvote me\" before asking a beginner question.\n\nIf thats the case that this community rips beginners for asking questions, then thats a problem. Everyone starts from the same place."
+        ,"label": "positive"
+    },
+    "fmqtfbo": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586335471.0,
+        "author": "acangiano",
+        "text": "`bank_account = 1000 # You now have $1,000`\n\n`bank_account == 1000 # Do you have exactly $1,000?`\n\n`bank_account >= 1000 # Do you have at least $1,000?`\n\n`bank_account is not None # Do you even have a bank account, bro?`"
+        ,"label": "neutral"
+    },
+    "fmomtv7": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.881,
+            "pos": 0.119,
+            "compound": 0.7579
+        },
+        "ups": 6,
+        "downs": 0,
+        "created": 1586292497.0,
+        "author": "tangerinelion",
+        "text": "Suppose you take your dict x and pass it to foo.  Should foo(x) make a copy or work with the same one?  When you see def foo(y): this is creating another variable named y which is created in the same way as y = x would.\n\nIn Python it works with the same one unless you explicitly copy it into foo.  In C++ it creates a copy unless you explicitly ask it to share."
+        ,"label": "neutral"
+    },
+    "fmomvgl": {
+        "score": {
+            "neg": 0.04,
+            "neu": 0.894,
+            "pos": 0.066,
+            "compound": 0.5223
+        },
+        "ups": 4,
+        "downs": 0,
+        "created": 1586292530.0,
+        "author": "renfri101",
+        "text": "Well, in the example that you've provided, it is not useful. References are primarily used for either storing the same object in multiple collections or passing them to a different scope. For example, if you were to pass a dictionary to a function, you wouldn't want to copy the whole dictionary, right? That could take a long time to do + it's super memory inefficient + you wouldn't be able to modify the object outside of the scope (e.g. leading to you having to have your whole program in one function)."
+        ,"label": "negative"
+    },
+    "fmondsl": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586292902.0,
+        "author": "toastedstapler",
+        "text": "imagine we're making a swarm simulation where agents explore the world and feed in their discoveries into a collective world map. we can give each agent a reference to a dict of `Coord->Boolean` representing the world state for each coordinate. as all agents are using the same dict, they can instantly get the new knowledge from each other\n\nin terms of real world, think how we all interact with the same reddit rather than having our own personal reddits"
+        ,"label": "neutral"
+    },
+    "fmpx1p8": {
+        "score": {
+            "neg": 0.126,
+            "neu": 0.758,
+            "pos": 0.116,
+            "compound": -0.1027
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586317697.0,
+        "author": "66bananasandagrape",
+        "text": "Speed: If you're calling a function that accepts a huge object as an argument, it's much faster to pass a reference to that argument than it would be to copy the entire object at every function call."
+        ,"label": "neutral"
+    },
+    "fmoov42": {
+        "score": {
+            "neg": 0.02,
+            "neu": 0.869,
+            "pos": 0.111,
+            "compound": 0.8803
+        },
+        "ups": 8,
+        "downs": 0,
+        "created": 1586293972.0,
+        "author": "Astrokiwi",
+        "text": "Only for short strings!\n\n    In [32]: a = \"foo\"                                                                                                                                                                  \n\n    In [33]: b = \"foo\"                                                                                                                                                                  \n\n    In [34]: a is b                                                                                                                                                                     \n    Out[34]: True\n\n    In [35]: a = \"I am the very model of a modern major general\"                                                                                                                        \n\n    In [36]: b = \"I am the very model of a modern major general\"                                                                                                                        \n\n    In [37]: a is b                                                                                                                                                                     \n    Out[37]: False\n\nFor strings (and also primitives like integers etc), I think this behaviour is esoteric enough that you shouldn't make any assumptions about `is`ness. For any immutable, I think you should avoid using `is` at all to be honest. The only exception I could imagine is if you really care about micromanaging your memory, in which case you shouldn't really be writing in Python."
+        ,"label": "negative"
+    },
+    "fmoufxi": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.831,
+            "pos": 0.169,
+            "compound": 0.6908
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586297492.0,
+        "author": "samketa",
+        "text": "Thanks for pointing out. It was meant to give an idea what ```is``` is all about.\n\nAnd as another user has pointed out, this is true for short string only."
+        ,"label": "positive"
+    },
+    "fmogvvw": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 19,
+        "downs": 0,
+        "created": 1586287334.0,
+        "author": "XOlt_",
+        "text": "Lists start from 0"
+        ,"label": "neutral"
+    },
+    "fmogzfv": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 5,
+        "downs": 0,
+        "created": 1586287434.0,
+        "author": "ironglory",
+        "text": "Remember to index from 0: x[0] = 'a', x[1] = 'b', x[2] = 'c', x[3] = 'd'."
+        ,"label": "neutral"
+    },
+    "fmolea6": {
+        "score": {
+            "neg": 0.282,
+            "neu": 0.718,
+            "pos": 0.0,
+            "compound": -0.6249
+        },
+        "ups": 5,
+        "downs": 0,
+        "created": 1586291362.0,
+        "author": "XAWEvX",
+        "text": "Damn you got really downvoted for a simple mistake in a subreddit for people learning to program"
+        ,"label": "neutral"
+    },
+    "fmoi361": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": -4,
+        "downs": 0,
+        "created": 1586288483.0,
+        "author": "deleted",
+        "text": "[deleted]"
+        ,"label": "neutral"
+    },
+    "fmobw5o": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.571,
+            "pos": 0.429,
+            "compound": 0.4588
+        },
+        "ups": 11,
+        "downs": 0,
+        "created": 1586281967.0,
+        "author": "TedTheTwonk",
+        "text": "actually -5 to 256 :)"
+        ,"label": "neutral"
+    },
+    "fmoggsp": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 5,
+        "downs": 0,
+        "created": 1586286918.0,
+        "author": "kochuyt",
+        "text": "As far as I know that fact is an 'implementation detail' not a 'language feature'. So that means it is not guaranteed that other implementations of Python do it also this way.\n\nIn short: don't rely on this, always test using the equality operator (`==`)"
+        ,"label": "negative"
+    },
+    "fmoi5sb": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586288550.0,
+        "author": "Poddster",
+        "text": "> Python\n\nCorrection: CPython"
+        ,"label": "negative"
+    },
+    "fmp84mi": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.903,
+            "pos": 0.097,
+            "compound": 0.4019
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586304993.0,
+        "author": "julsmanbr",
+        "text": "`id(obj1).__eq__(id(obj2))`, i.e. the equality method between two integers objects, which are in turn the return values of the id function applied to the two starting objects."
+        ,"label": "neutral"
+    },
+    "fmr1ti9": {
+        "score": {
+            "neg": 0.195,
+            "neu": 0.754,
+            "pos": 0.05,
+            "compound": -0.7121
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586340722.0,
+        "author": "baubleglue",
+        "text": "ha\n\n    In [5]: not 2\n    Out[5]: False\n    \n    In [6]: False is not 2\n    Out[6]: True\n    \n    In [7]: False is False\n    Out[7]: True\n    \n    In [8]: False is (not 2)\n    Out[8]: True\n    \n    In [9]: 3 is (not 2)\n    Out[9]: False\n    \n    In [10]: 3 is not 2\n    Out[10]: True"
+        ,"label": "neutral"
+    },
+    "fmriivq": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.0,
+            "pos": 1.0,
+            "compound": 0.4926
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586353048.0,
+        "author": "El_Dumfuco",
+        "text": "Thanks!"
+        ,"label": "positive"
+    },
+    "fmox0fq": {
+        "score": {
+            "neg": 0.524,
+            "neu": 0.476,
+            "pos": 0.0,
+            "compound": -0.296
+        },
+        "ups": 4,
+        "downs": 0,
+        "created": 1586298956.0,
+        "author": "high_okktane",
+        "text": "No, it doesn\u2019t"
+        ,"label": "negative"
+    },
+    "fmofgn9": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.9,
+            "pos": 0.1,
+            "compound": 0.6973
+        },
+        "ups": 14,
+        "downs": 0,
+        "created": 1586285885.0,
+        "author": "Essence1337",
+        "text": "Fair enough but my point was more that True, False and None all are applications for `is`. Perhaps you have a variable which can be one of the three then maybe it makes more sense to say `is True`, `is False`, `is None` rather than `if x`, `if not x`, `if x is None`, etc, etc"
+        ,"label": "negative"
+    },
+    "fmog4fr": {
+        "score": {
+            "neg": 0.106,
+            "neu": 0.834,
+            "pos": 0.06,
+            "compound": -0.2429
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586286564.0,
+        "author": "flying-sheep",
+        "text": "Also if it can be something else, like a possibly empty collection (e.g. a string or list). Truthiness/falsyness is a central part of Python.\n\nComparing to `True`/`False` using `is` can very rarely be useful when dealing with function parameters and defaults."
+        ,"label": "negative"
+    },
+    "fmooau5": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.61,
+            "pos": 0.39,
+            "compound": 0.4926
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586293571.0,
+        "author": "MGoRedditor",
+        "text": "Also useful for truthy / falsy checks!"
+        ,"label": "positive"
+    },
+    "fmqadjy": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.857,
+            "pos": 0.143,
+            "compound": 0.25
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586324688.0,
+        "author": "captain_awesomesauce",
+        "text": "Only if you can guarantee how other people will use your code too."
+        ,"label": "negative"
+    },
+    "fms68ez": {
+        "score": {
+            "neg": 0.087,
+            "neu": 0.813,
+            "pos": 0.1,
+            "compound": 0.1179
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586376633.0,
+        "author": "Vaphell",
+        "text": "since when is `is` worse than `==` for bools?  \nCare to guess what is the result of `0 == False` vs `0 is False`, `1 == True` vs `1 is True`?"
+        ,"label": "negative"
+    },
+    "fmppzzd": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.732,
+            "pos": 0.268,
+            "compound": 0.765
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586314044.0,
+        "author": "R_Olivaw_Daneel",
+        "text": "Awesome, thank you for this explanation. So in the case of \\`dict\\` would the \\`\\_\\_eq\\_\\_\\` only be shallow checks then?"
+        ,"label": "positive"
+    },
+    "fmojbr1": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.379,
+            "pos": 0.621,
+            "compound": 0.8016
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586289603.0,
+        "author": "unsurestill",
+        "text": "okay thanks for the fast reply mate. cheers!"
+        ,"label": "positive"
+    },
+    "fmok7f0": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586290369.0,
+        "author": "synthphreak",
+        "text": "+1\n\nUnintuitively for the beginner, `=` in Python has nothing to do with equality. That\u2019s why `==` exists."
+        ,"label": "neutral"
+    },
+    "fmood3p": {
+        "score": {
+            "neg": 0.016,
+            "neu": 0.894,
+            "pos": 0.089,
+            "compound": 0.7935
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586293616.0,
+        "author": "Astrokiwi",
+        "text": "The weird thing is that Python even does this for primitive numbers - but only *sometimes*.\n\n    In [1]: y = 5                                                                                                                                                                       \n\n    In [2]: x = 5                                                                                                                                                                       \n\n    In [3]: y is x                                                                                                                                                                      \n    Out[3]: True\n\n    In [4]: y = 10000000000                                                                                                                                                                 \n\n    In [5]: x = 10000000000                                                                                                                                                                                                                                                                                                                                \n\n    In [6]: y is x                                                                                                                                                                      \n    Out[6]: False\n\nThere's also the old mutable vs immutable thing:\n\n    In [14]: x = 10                                                                                                                                                                     \n\n    In [15]: y = x                                                                                                                                                                      \n\n    In [16]: x+=1                                                                                                                                                                       \n\n    In [17]: y is x                                                                                                                                                                     \n    Out[17]: False\n\n    In [18]: x = [1,2,3,4]                                                                                                                                                              \n\n    In [19]: y = x                                                                                                                                                                      \n\n    In [20]: x+=[5]                                                                                                                                                                     \n\n    In [21]: y is x                                                                                                                                                                     \n    Out[21]: True\n\n    In [22]: x=x+[6]                                                                                                                                                                    \n\n    In [23]: x is y                                                                                                                                                                     \n    Out[23]: False"
+        ,"label": "neutral"
+    },
+    "fmortuy": {
+        "score": {
+            "neg": 0.271,
+            "neu": 0.729,
+            "pos": 0.0,
+            "compound": -0.6389
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586295931.0,
+        "author": "MattR0se",
+        "text": "The PyCharm linter always complains about `something == None`, so I stuck to `something is None`. \n\n[http://jaredgrubb.blogspot.com/2009/04/python-is-none-vs-none.html](http://jaredgrubb.blogspot.com/2009/04/python-is-none-vs-none.html)"
+        ,"label": "neutral"
+    },
+    "fmou1cw": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586297260.0,
+        "author": "theWyzzerd",
+        "text": "For integers, you can make this assumption up to integer 255."
+        ,"label": "neutral"
+    },
+    "fmor8xi": {
+        "score": {
+            "neg": 0.044,
+            "neu": 0.835,
+            "pos": 0.121,
+            "compound": 0.5994
+        },
+        "ups": 0,
+        "downs": 0,
+        "created": 1586295562.0,
+        "author": "baubleglue",
+        "text": ">I think you should avoid using is at all to be honest.\n\n    In [1]: class A():                            \n       ...:     pass                              \n       ...:                                       \n                                                  \n    In [2]: a1 = A()                                                                           \n    In [3]: a2 = a1                                                                           \n    In [4]: a3 = A()                                                                            \n    In [5]: a1 is a2                              \n    Out[5]: True                                                                         \n    In [6]: a1 is a3                              \n    Out[6]: False"
+        ,"label": "negative"
+    },
+    "fmoiwtg": {
+        "score": {
+            "neg": 0.175,
+            "neu": 0.825,
+            "pos": 0.0,
+            "compound": -0.3252
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586289234.0,
+        "author": "Migeil",
+        "text": "But x[1] == x[3] wouldn't return True, as 'a' is not 'c'."
+        ,"label": "neutral"
+    },
+    "fmplkmo": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.957,
+            "pos": 0.043,
+            "compound": 0.3612
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586311796.0,
+        "author": "Hailcanadien",
+        "text": "This. If you are unfamiliar with methods like `__eq__` or `__str__`,  you should look up magic attributes.\n\nMost objects define these methods and you use them without knowing. You just stumbled upon one (`__eq__`) which is called when one object is compared to another with `==`. Another is `__str__` which is called when `str(object)` is called."
+        ,"label": "neutral"
+    },
+    "fmrii1j": {
+        "score": {
+            "neg": 0.346,
+            "neu": 0.385,
+            "pos": 0.269,
+            "compound": -0.1531
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586353027.0,
+        "author": "El_Dumfuco",
+        "text": "Well damn, I didn't expect this."
+        ,"label": "negative"
+    },
+    "fmoivg0": {
+        "score": {
+            "neg": 0.076,
+            "neu": 0.826,
+            "pos": 0.099,
+            "compound": 0.3208
+        },
+        "ups": 27,
+        "downs": 0,
+        "created": 1586289200.0,
+        "author": "JohnnyJordaan",
+        "text": "It would only make sense if the objective was to make sure another Truethy or Falsey value wouldn't give a false positive, eg \n\n    if not x:\n\nis True if x would for example be `0` or `[]`, and `False` of course. While \n\n    if x is False:\n\nwould only be True if `x` is in fact a reference to `False` and not if it's `0` or `[]`.\n\n`None` is a separate case, so `is None` is the only option if `None` is targeted. If it isn't it's included in the Falsey values like `0` and `[]`."
+        ,"label": "neutral"
+    },
+    "fmoz6kc": {
+        "score": {
+            "neg": 0.08,
+            "neu": 0.887,
+            "pos": 0.033,
+            "compound": -0.4019
+        },
+        "ups": 7,
+        "downs": 0,
+        "created": 1586300162.0,
+        "author": "DrShocker",
+        "text": "Personally, even though it works, I would avoid it. You could also do it with small ints (less than 255? I forget the cutoff) because they point to the same object. \n\nThe reason I would avoid it is because `is` was meant to determine whether two objects are the same, so even if these result is the same, the intent is not. I would strive to be clear in my intent rather than just getting the right answer."
+        ,"label": "negative"
+    },
+    "fmph5ix": {
+        "score": {
+            "neg": 0.13,
+            "neu": 0.666,
+            "pos": 0.203,
+            "compound": 0.5276
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586309549.0,
+        "author": "0xD153A53",
+        "text": "Forgive my ignorance, but could x and y both be TRUE, but point to different objects? In which case x == y, but x is not y (same value, different object)?"
+        ,"label": "neutral"
+    },
+    "fmq4yxs": {
+        "score": {
+            "neg": 0.103,
+            "neu": 0.868,
+            "pos": 0.029,
+            "compound": -0.6187
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586321759.0,
+        "author": "Not-the-best-name",
+        "text": "AFAIR the official docs strongly advise against chucking for None using \"is\". Use ==.\n\nNone can be a False type (duck typing), but other things will also return False. So if you are checking for None and you get an accidental False you won't know which it is.\n\nEdit: I am wrong"
+        ,"label": "negative"
+    },
+    "fmspvb2": {
+        "score": {
+            "neg": 0.029,
+            "neu": 0.842,
+            "pos": 0.129,
+            "compound": 0.9741
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586388868.0,
+        "author": "66bananasandagrape",
+        "text": "> since when\n \nThis probably isn't what you mean, but it's been in PEP 8 since Guido added it in [December 2005](\nhttps://github.com/python/peps/commit/b7714412f7ef5baf7adc7acef1cc73c5a9f00dc0).\n\n> care to guess\n\nI think it's pretty clear: 1 and True are equal but not \"is\". 0 and False are equal but not \"is\". This is because bool is a subclass of int, so the values are compared as ints. It's like how 0.5 == Fraction(1,2), but they aren't the same object.\n\nIt seems to me that checking \"is\" goes against the philosophy of duck-typing--it's relying too much on assumptions about its caller. If you want to do type-checking for whatever reason, you can still explicitly do `if not isinstance(food, bool): raise TypeError(\"message\")`. But just adding that to an if that's already there is either (1) letting something pass silently that you intend to be an error or (2) adds two more tokens for no reason at all and needlessly subverts duck typing. What if you wanted to subclass bool so that every comparison was logged? Your code would break, while the idiom without \"is\" would still work. There's also already a special case in CPython that makes \"if foo:\" fast if foo is a bool.\n\nGranted, there may be some use cases, but as a go-to for testing booleans, \"if foo:\" is the idiom."
+        ,"label": "negative"
+    },
+    "fmqkuoq": {
+        "score": {
+            "neg": 0.07,
+            "neu": 0.895,
+            "pos": 0.035,
+            "compound": -0.2732
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586330400.0,
+        "author": "CamiloDFM",
+        "text": "Not necessarily. It's going to be as deep as every object's `__eq__` allows. If you had a dict of dicts it would check every single key, no matter how deeply nested."
+        ,"label": "negative"
+    },
+    "fmojo3k": {
+        "score": {
+            "neg": 0.018,
+            "neu": 0.95,
+            "pos": 0.033,
+            "compound": 0.2732
+        },
+        "ups": 7,
+        "downs": 0,
+        "created": 1586289905.0,
+        "author": "kberson",
+        "text": "Sorry for the brusque reply, was on mobile at the time. Doing an assignment is not the same as checking for `is`; an assignment copies one value over to another while `is` checks to see if two point to the same memory location.\n\nAre you thinking Java? In Java, every object is a pointer and doing an assign makes them both point to the same thing. This is not the case in Python."
+        ,"label": "neutral"
+    },
+    "fmot8ky": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.929,
+            "pos": 0.071,
+            "compound": 0.75
+        },
+        "ups": 10,
+        "downs": 0,
+        "created": 1586296787.0,
+        "author": "theWyzzerd",
+        "text": "This is because python pre-caches the first 256 integers and assigns them in memory before you need them, so any instances of an integer between 0 and 256 will have the same ID.  See the following example:\n\n    >>> x = 1000000000\n    >>> id(x)\n    4377856240\n    >>> id(1000000000)\n    4377856368\n    >>> x is 1000000000\n    False\n    >>> x = 42\n    >>> id(42)\n    4374077632\n    >>> id(x)\n    4374077632\n    >>> x is 42\n    True\n    >>> id(242)\n    4374084032\n    >>> id(243)\n    4374084064\n    >>> x = 242\n    >>> id (x)\n    4374084032\n    >>> id(243)\n    4374084064\n    >>> x = 243\n    >>> id(x)\n    4374084064\n    >>> x is 243\n    True\n    >>>\n\nEdit: the caching of integers actually extends from -5 to 256--thanks for the heads up!"
+        ,"label": "neutral"
+    },
+    "fmoz5ab": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.912,
+            "pos": 0.088,
+            "compound": 0.6486
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586300143.0,
+        "author": "julsmanbr",
+        "text": "For your mutable vs. immutable example: the `+=` operator works in-place whenever possible. Which is why the list has the same identity after the line `x+=[5]`. On the other hand, writing it as `x=x+[6]` makes Python create a new object based on whatever's on the right-hand side, and only then that object is binded to the name `x`."
+        ,"label": "neutral"
+    },
+    "fmpk3pn": {
+        "score": {
+            "neg": 0.079,
+            "neu": 0.864,
+            "pos": 0.058,
+            "compound": -0.1511
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586311052.0,
+        "author": "yarhiti",
+        "text": "Careful, though: that's a CPython behavior, not a Python behavior! It's not part of the spec for the language, so technically it's something you can forget about altogether."
+        ,"label": "neutral"
+    },
+    "fmoxypv": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.678,
+            "pos": 0.322,
+            "compound": 0.9057
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586299501.0,
+        "author": "Sbvv",
+        "text": "It is not weird, Java do the same. It is an easy compiler optimization.\n\nNow, give a try with short strings and long strings ;)\n\nYou can find more curious things like this reading the Python documentation."
+        ,"label": "neutral"
+    },
+    "fmovda5": {
+        "score": {
+            "neg": 0.086,
+            "neu": 0.836,
+            "pos": 0.077,
+            "compound": -0.0754
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586298014.0,
+        "author": "Astrokiwi",
+        "text": "I wouldn't rely on behaviour that depends on the *value* of a variable, rather than its type. That seems like it would cause bugs that could be very difficult to trace."
+        ,"label": "neutral"
+    },
+    "fmotihe": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.942,
+            "pos": 0.058,
+            "compound": 0.5451
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586296952.0,
+        "author": "Astrokiwi",
+        "text": "That's exactly what I would expect though - that's the same behaviour you'd get in Java or C++. This is exactly the situation that `is` is designed to distinguish. `A()` constructs a new object every time. You created an object, then pointed two variables to it. You then created a new object. So the first two point to the same object, and the last one doesn't.\n\nThe weird thing in Python is what it does with short strings and small numbers, and the difference between mutables and immutables - these somewhat obscure what is a \"pointer\" and what isn't."
+        ,"label": "neutral"
+    },
+    "fmouwia": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.938,
+            "pos": 0.062,
+            "compound": 0.6486
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586297753.0,
+        "author": "theWyzzerd",
+        "text": "It is obvious in this example that a3 is being assigned a new object of type A, which \\*should\\* give it a different space in memory, whereas a2 is just a pointer to the existing object assigned to a1.  Instantiating a new class like this is not the same. `A()` is actually a method (`A.__init__()`) that generates a brand new object in memory.  Use A (without the parens) and you will have different results (a1 is a3 will be True because they both reference the same object in memory)."
+        ,"label": "neutral"
+    },
+    "fmqqw6u": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.896,
+            "pos": 0.104,
+            "compound": 0.4215
+        },
+        "ups": 0,
+        "downs": 0,
+        "created": 1586333924.0,
+        "author": "NotHumanbeing99",
+        "text": "The indexing starts from 0, therefore:\n\n    x[0] == 'a'\n    x[1] == 'b'\n    x[2] == 'c'\n    x[3] == 'b'\n\nso x[1] == x[3] will return True."
+        ,"label": "neutral"
+    },
+    "fmp6cuy": {
+        "score": {
+            "neg": 0.029,
+            "neu": 0.896,
+            "pos": 0.075,
+            "compound": 0.4939
+        },
+        "ups": -4,
+        "downs": 0,
+        "created": 1586304064.0,
+        "author": "TangibleLight",
+        "text": "Well, then you've got a variable that might be some object or might be a boolean. That's a smell in my book, and indicates that there's some other problem with your code.\n\nAlthough variables in Python *can* take on different types, it doesn't mean they *should*. Variables should keep the same semantics. A falsey value *should* be considered false in that context, and if you need to consider some other condition then that condition should probably be considered separately, in another variable - not encoded in the same variable as a boolean value."
+        ,"label": "negative"
+    },
+    "fmqvkut": {
+        "score": {
+            "neg": 0.028,
+            "neu": 0.91,
+            "pos": 0.062,
+            "compound": 0.7523
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586336807.0,
+        "author": "__xor__",
+        "text": "I think it's due to there being some conditions where you have a distinction between False and None. You want to check whether something is False or None, you might see `if x is False:` and `elif x is None:`.\n\nFor example, a keyword value might be `debug=None` which tells you it wasn't passed, but someone might explicitly set it to `False` which you want to check for. Maybe if it's None you look in the config, but if they passed False explicitly you skip the config and just turn off debug mode.\n\n`is` works for True/False/None always really if you want to make sure it's exactly one of those values and not just truthy/falsey. I'd never use it for integers, but for True/False/None, they're always going to have the same identity."
+        ,"label": "neutral"
+    },
+    "fmsbdm5": {
+        "score": {
+            "neg": 0.008,
+            "neu": 0.888,
+            "pos": 0.104,
+            "compound": 0.9089
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586380526.0,
+        "author": "able-part",
+        "text": "> You could also do it with small ints (less than 255? I forget the cutoff) because they point to the same object.\n\nThat relies on a CPython implementation detail, and in CPython 3.8 it actually gives a `SyntaxWarning`. If you want to check whether a variable is precisely the `int` `1`, as opposed to something like `1.0` or `True`, you should probably be doing something like:\n\n    if type(x) is int and x == 1:\n\ninstead of:\n\n    if x is 1:\n\nOn the other hand, the python docs guarantee that there are only ever two instances of `bool` - it can't even be subclassed. So it's perfectly valid to do:\n\n    if x is True:\n\nand this should behave the same in all working implementations of python (at least for sufficiently recent versions of python, though afaik it's been this way for a long time). It's not very often the right thing to do, but there could conceivably be circumstances where you want to distinguish between the actual object `True` and other truthy values."
+        ,"label": "neutral"
+    },
+    "fmpne8h": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.847,
+            "pos": 0.153,
+            "compound": 0.6597
+        },
+        "ups": 6,
+        "downs": 0,
+        "created": 1586312725.0,
+        "author": "Essence1337",
+        "text": "True is a single object in Python, if any variable has the value True is points to the same object, if you're referring to them being truthy - that is they evaluate to true (like a non-empty list) - then perhaps but it completely depends on the object type."
+        ,"label": "neutral"
+    },
+    "fmpq636": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.825,
+            "pos": 0.175,
+            "compound": 0.6705
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586314131.0,
+        "author": "primitive_screwhead",
+        "text": "Yes, two different \"truthy\" objects can compare equal, and the 'is' result will differ from the '==' result.  (There is only one actual True object in Python, though)"
+        ,"label": "neutral"
+    },
+    "fmpqbw4": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.491,
+            "pos": 0.509,
+            "compound": 0.9716
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586314214.0,
+        "author": "TSM-",
+        "text": "Like this? \n\n    x = 1\n    y = True\n    x == y     # True\n    x == True  # True\n    y == True  # True\n    x is True  # False\n    x is y     # False\n\nedit - or maybe this sense\n\n    d1 = dict(a=1,b=2)\n    d2 = dict(a=1,b=2)\n    d1 == d2    # True\n    d1 is d2    # False"
+        ,"label": "neutral"
+    },
+    "fmqh3s2": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.961,
+            "pos": 0.039,
+            "compound": 0.3612
+        },
+        "ups": 4,
+        "downs": 0,
+        "created": 1586328292.0,
+        "author": "Essence1337",
+        "text": "You got it backwards, `None` is the primary case for `is`, per the c-api: 'Since None is a singleton testing for object identity is sufficient'. Duck typing does not apply using `is` because it is object identity comparison.\n\nEdit: Also per PEP8 (the python style guide) \"Comparisons to singletons like None should always be down with `is` or `is not`, never the equality operator\""
+        ,"label": "negative"
+    },
+    "fmql8s3": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.662,
+            "pos": 0.338,
+            "compound": 0.5574
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586330624.0,
+        "author": "R_Olivaw_Daneel",
+        "text": "Okay interesting, so by default dict's dunder eq is a deep check."
+        ,"label": "positive"
+    },
+    "fmoy17f": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 5,
+        "downs": 0,
+        "created": 1586299540.0,
+        "author": "Sbvv",
+        "text": "In fact, from -5 to 256."
+        ,"label": "neutral"
+    },
+    "fmotl0x": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586296994.0,
+        "author": "Astrokiwi",
+        "text": "Exactly."
+        ,"label": "positive"
+    },
+    "fmp5n7n": {
+        "score": {
+            "neg": 0.113,
+            "neu": 0.887,
+            "pos": 0.0,
+            "compound": -0.3182
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586303685.0,
+        "author": "Astrokiwi",
+        "text": "I do get it - it's just a bit of a trap for people who think that x+=y is just shorthand for x=x+y"
+        ,"label": "positive"
+    },
+    "fmpl0i3": {
+        "score": {
+            "neg": 0.153,
+            "neu": 0.694,
+            "pos": 0.153,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586311509.0,
+        "author": "Astrokiwi",
+        "text": "Yeah, I would avoid using `is` for primitives because the behaviour isn't consistent"
+        ,"label": "negative"
+    },
+    "fmoyfml": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.745,
+            "pos": 0.255,
+            "compound": 0.34
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586299761.0,
+        "author": "Astrokiwi",
+        "text": "Aren't all primitives done by value in Java?"
+        ,"label": "neutral"
+    },
+    "fmr19g0": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.8,
+            "pos": 0.2,
+            "compound": 0.6705
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586340359.0,
+        "author": "baubleglue",
+        "text": "Hm... I am not claiming that it is unexpected, just saying it is useful. \n\nJava does the same with strings - result of memory optimization. \n\n[https://www.baeldung.com/java-string-pool#string-interning](https://www.baeldung.com/java-string-pool#string-interning)"
+        ,"label": "neutral"
+    },
+    "fmqyjvl": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.851,
+            "pos": 0.149,
+            "compound": 0.8126
+        },
+        "ups": 0,
+        "downs": 0,
+        "created": 1586338652.0,
+        "author": "baubleglue",
+        "text": "I like that \" obvious\", you suggest not to use `is` for immutable\n\n    In [1]: s = (1, 1, 2)\n    \n    In [2]: s == (1, 1, 2)\n    Out[2]: True\n    \n    In [3]: s is (1, 1, 2)\n    Out[3]: False\n\nSo how you suggest to check if valuable is the same object? It has nothing to with \"memory  micromanaging\"."
+        ,"label": "neutral"
+    },
+    "fmrgux0": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586351609.0,
+        "author": "Migeil",
+        "text": "The comment I replied to, started with \"even if lists start from 1\u2026.\""
+        ,"label": "neutral"
+    },
+    "fmpa8dz": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.847,
+            "pos": 0.153,
+            "compound": 0.4404
+        },
+        "ups": 7,
+        "downs": 0,
+        "created": 1586306066.0,
+        "author": "monetaryhighway",
+        "text": "As a newbie, you guys got deep. I followed most of it to the end of the conversation, thanks."
+        ,"label": "positive"
+    },
+    "fmpezkj": {
+        "score": {
+            "neg": 0.097,
+            "neu": 0.845,
+            "pos": 0.058,
+            "compound": -0.7947
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586308451.0,
+        "author": "JohnnyJordaan",
+        "text": "I fully agree, but you're not always writing code for yourself remember? So even tough your code may be fine, the user will present a wrongly typed object which will then give a false positive or negative. One common example I can think of is XML and HTML parsing where people do\n\n     if not some_elem.find('my_tag'):\n\nwhich will then give a false negative as the returned object is Truethy even though there wasn't a functional result. Meaning you should do an explicit `is None` in that circumstance, but the same applies for `is False` and `is True`. If you don't control the source, there's no point in claiming how things should or shouldn't be, it's implementing your check in the way you intend it. Which could be (again, I'm not saying it should, I'm saying it *could*) be met via `is True` or `is False`."
+        ,"label": "neutral"
+    },
+    "fmt8hwm": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.847,
+            "pos": 0.153,
+            "compound": 0.4019
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586397356.0,
+        "author": "66bananasandagrape",
+        "text": "Even then you can do\n\n    if x is None:\n        # handle defaults\n    elif not x:\n        # handle falsy values"
+        ,"label": "neutral"
+    },
+    "fmq4ds9": {
+        "score": {
+            "neg": 0.131,
+            "neu": 0.765,
+            "pos": 0.104,
+            "compound": -0.1295
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586321454.0,
+        "author": "0xD153A53",
+        "text": "Okay, I was thinking of it in a purely logical sense, not necessarily programmatically.  Thanks for the clarification."
+        ,"label": "positive"
+    },
+    "fmpwohe": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.573,
+            "pos": 0.427,
+            "compound": 0.8807
+        },
+        "ups": 6,
+        "downs": 0,
+        "created": 1586317507.0,
+        "author": "66bananasandagrape",
+        "text": "Your example is not correct:\n\n    >>> x = 1\n    >>> y = True\n    >>> \n    >>> x == y == True == 1\n    True\n    >>> x is True\n    False"
+        ,"label": "negative"
+    },
+    "fmrh8ra": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.264,
+            "pos": 0.736,
+            "compound": 0.4199
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586351934.0,
+        "author": "Not-the-best-name",
+        "text": "Thank you!"
+        ,"label": "positive"
+    },
+    "fmp8b5n": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.888,
+            "pos": 0.112,
+            "compound": 0.7947
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586305087.0,
+        "author": "takishan",
+        "text": "I was trying to learn some sorting algorithms the other day and I could not for the life of me figure out why operations I did on a copy of a table would change the original table.\n\nI thought it was a bug or I was doing something wrong... until I learned you need to make an actual copy of a list if you want to run different sorting algorithms on the same list.\n\n    x = [1,2,3]\n    y = x.copy()\n\nSo yeah I wish I read your comment a few days ago x)"
+        ,"label": "positive"
+    },
+    "fmp8v1i": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586305369.0,
+        "author": "Sbvv",
+        "text": "See:\n\nhttps://stackoverflow.com/questions/1514910/how-to-properly-compare-two-integers-in-java\n\nIn Java is from -128 to 127, but it is the same concept."
+        ,"label": "neutral"
+    },
+    "fmrw74p": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.936,
+            "pos": 0.064,
+            "compound": 0.3854
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586366523.0,
+        "author": "Astrokiwi",
+        "text": "I guess the rule is then \"don't use `is` in Python or `==` in Java on immutable objects\". And that makes sense I guess - \"these objects have the same data but are different objects\" is really only important for mutable variables."
+        ,"label": "neutral"
+    },
+    "fms155z": {
+        "score": {
+            "neg": 0.565,
+            "neu": 0.435,
+            "pos": 0.0,
+            "compound": -0.0772
+        },
+        "ups": 2,
+        "downs": 0,
+        "created": 1586371775.0,
+        "author": "NotHumanbeing99",
+        "text": "sorry then."
+        ,"label": "neutral"
+    },
+    "fmphkgj": {
+        "score": {
+            "neg": 0.018,
+            "neu": 0.817,
+            "pos": 0.165,
+            "compound": 0.8588
+        },
+        "ups": 0,
+        "downs": 0,
+        "created": 1586309761.0,
+        "author": "TangibleLight",
+        "text": "I think `is None` checks are more acceptable, since `None` is more or less Pythons version of nullables. To me there's a difference between that and expecting something to maybe be True or False or value.\n\nGood point that you can't always control the source, though, and in that case then `is True` or `is False` would do the trick."
+        ,"label": "neutral"
+    },
+    "fmpxl30": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.722,
+            "pos": 0.278,
+            "compound": 0.6597
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586317967.0,
+        "author": "TSM-",
+        "text": "Thanks for pointing that out. I should have copied and pasted from the console like you did."
+        ,"label": "positive"
+    },
+    "fmq5et8": {
+        "score": {
+            "neg": 0.0,
+            "neu": 0.436,
+            "pos": 0.564,
+            "compound": 0.3802
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586321991.0,
+        "author": "Not-the-best-name",
+        "text": "This is cool!"
+        ,"label": "positive"
+    },
+    "fmpakzl": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586306249.0,
+        "author": "Astrokiwi",
+        "text": "Ah right - for `Integer`, not `int`."
+        ,"label": "neutral"
+    },
+    "fn4os5k": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586674562.0,
+        "author": "baubleglue",
+        "text": ">I guess the rule is then \"don't use is in Python or == in Java on immutable objects\".\n\nThe rules are:\n\nIn Python use `is` if what to know that it is the same object (reference to the same memory) . Java doesn't have  `is` but you can use  == in the same way as Python uses is, there is also  `equals` method which can be overwritten.\n\n[https://www.java67.com/2012/11/difference-between-operator-and-equals-method-in.html](https://www.java67.com/2012/11/difference-between-operator-and-equals-method-in.html)\n\n&#x200B;\n\n**nothing to with mutable/ immutable**"
+        ,"label": "neutral"
+    },
+    "fmppsmh": {
+        "score": {
+            "neg": 0.094,
+            "neu": 0.906,
+            "pos": 0.0,
+            "compound": -0.3612
+        },
+        "ups": 3,
+        "downs": 0,
+        "created": 1586313941.0,
+        "author": "intangibleTangelo",
+        "text": "`is None` comes up frequently in argument checking. I don't think I've seen `is True` or `is False` much in my many years of python coding."
+        ,"label": "neutral"
+    },
+    "fn5p22u": {
+        "score": {
+            "neg": 0.021,
+            "neu": 0.79,
+            "pos": 0.189,
+            "compound": 0.9707
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586699969.0,
+        "author": "Astrokiwi",
+        "text": "I'm talking about best practices, not the literal definition of the operators.\n\nFor mutables, you can modify the data, so you really need to make sure that other variables bound to the same data only get modified when you're sure you want them to etc. So `is` is useful for distinguishing between whether they have two copies of the same data or are literally pointing at the same piece of memory. \n\nBut for immutables, it becomes a moot point. You can't change the data, so you don't need to worry about the side effects. So the backend can feel free to optimise things for performance rather than consistency. The result is that `is` becomes less useful, or even dangerous, when used on two immutables, except in special circumstances."
+        ,"label": "neutral"
+    },
+    "fn6j988": {
+        "score": {
+            "neg": 0.033,
+            "neu": 0.816,
+            "pos": 0.151,
+            "compound": 0.866
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586729502.0,
+        "author": "baubleglue",
+        "text": "You are taking about an operator - very low level element of programming language. This is not a point to talk about best practices. You have to look the definition. \nBest practices applies to a choice between few functionaly equal options. `Is` and `==` two different operators which behave similarly in some situations.  You shouldn't use `is` to compare values which is not an address of variable."
+        ,"label": "neutral"
+    },
+    "fn6kvxh": {
+        "score": {
+            "neg": 0.148,
+            "neu": 0.721,
+            "pos": 0.131,
+            "compound": -0.5907
+        },
+        "ups": 1,
+        "downs": 0,
+        "created": 1586730603.0,
+        "author": "Astrokiwi",
+        "text": "For immutables like strings and primitive integers etc, `is` behaves in a way that depends on the data, in such a way that could easily cause bugs. A program could work when tested with short strings, but fail when run with longer strings. That's dangerous. You want to avoid that sort of sensitivity in your code. So you should probably avoid using `is` for immutables outside of certain special cases - like `is None` etc.\n\nIt's also more than a little silly to invent an arbitrary rule about what we're allowed to give advice on..."
+        ,"label": "negative"
+    },
+    "fn7bxif": {
+        "score": {
+            "neg": 0.0,
+            "neu": 1.0,
+            "pos": 0.0,
+            "compound": 0.0
+        },
+        "ups": 0,
+        "downs": 0,
+        "created": 1586746099.0,
+        "author": "baubleglue",
+        "text": "Show example where `is` behave not correctly. If you do, I will show example where your can't replace `is` with `==`."
+        ,"label": "negative"
+    }
+}
